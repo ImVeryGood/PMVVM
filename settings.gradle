@@ -1,0 +1,3 @@
+include ':jmvvmlibrary'
+include ':app'
+rootProject.name = "PMVVM"
