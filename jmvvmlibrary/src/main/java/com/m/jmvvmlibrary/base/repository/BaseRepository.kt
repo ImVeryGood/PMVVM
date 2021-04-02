@@ -4,7 +4,6 @@ import android.util.Log
 import com.m.jmvvmlibrary.JApplication
 import com.m.jmvvmlibrary.base.net.ApiException
 import com.m.jmvvmlibrary.base.net.bean.BaseResponse
-import com.m.jmvvmlibrary.base.util.showToast
 
 /**
  * createDate:2021/3/31
@@ -23,8 +22,10 @@ open class BaseRepository {
             baseBean.getResponseData()
         } else {// 失败
             // 抛出接口异常
-            JApplication.mContext.showToast(baseBean.getResponseMsg())
-            throw ApiException(baseBean.getResponseCode(), baseBean.getResponseMsg())
+            JApplication.mContext.showToast(baseBean.getResponseMsg() as String)
+            throw ApiException(baseBean.getResponseCode() as String,
+                baseBean.getResponseMsg() as String
+            )
         }
     }
 }

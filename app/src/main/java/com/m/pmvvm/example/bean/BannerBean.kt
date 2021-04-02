@@ -6,16 +6,16 @@ package com.m.pmvvm.example.bean
  * @describe：
  */
 data class BannerBean(
-    val createTime: Long,
-    val deviceType: String,
-    val href: String,
-    val id: Int,
-    val imgUrl: String,
-    val indexId: Int,
-    val keyword: String,
-    val sideColor: Any,
-    val size: Any,
-    val status: String,
-    val type: String,
-    val updateTime: Long
+    val createTime: Long? = 0,
+    val deviceType: String? = null,
+    val href: String? = null,
+    val id: Int? = 0,
+    val imgUrl: String? = null,
+    val indexId: Int? = 0,
+    val keyword: String? = null,
+    val sideColor: Any? = null,
+    val size: Any? = null,
+    val status: String? = null,
+    val type: String? = null,
+    val updateTime: Long? = 0
 )
